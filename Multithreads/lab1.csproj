@@ -4,15 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0718C644-8AE5-4D62-AD46-5D8C37FD6135}</ProjectGuid>
+    <ProjectGuid>{394BC6BB-727C-4339-A56B-4A61485897E6}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Multithreads</RootNamespace>
-    <AssemblyName>Multithreads</AssemblyName>
+    <RootNamespace>lab1</RootNamespace>
+    <AssemblyName>lab1</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
-    <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -47,21 +45,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-<<<<<<< HEAD:Multithreads/FIFOApp.csproj
-    <Compile Include="ComputeUnit.cs" />
-    <Compile Include="ProbabilityGenerator.cs" />
-    <Compile Include="Task.cs" />
-    <Compile Include="FIFOForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FIFOForm.Designer.cs">
-      <DependentUpon>FIFOForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Program.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="FIFOForm.resx">
-      <DependentUpon>FIFOForm.cs</DependentUpon>
-=======
     <Compile Include="FormTask3.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,10 +63,10 @@
     <Compile Include="Task3.cs" />
     <EmbeddedResource Include="FormTask3.resx">
       <DependentUpon>FormTask3.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
->>>>>>> origin/master:Multithreads/Multithreads.csproj
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -93,8 +76,8 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="App.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -104,9 +87,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
