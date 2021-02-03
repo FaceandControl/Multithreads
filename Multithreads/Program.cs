@@ -16,7 +16,7 @@ namespace Multithreads
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FIFOForm());
+            Application.Run(new StartForm());
         }
     }
 }
