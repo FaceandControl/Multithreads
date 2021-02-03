@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace Multithreads
 {
-    public partial class FIFOForm : Form
+    public partial class SchedulerWeakForm : Form
     {
         private StartForm startForm;
-        public FIFOForm(StartForm _startForm)
+        public SchedulerWeakForm(StartForm _startForm)
         {
             InitializeComponent();
             startForm = _startForm;
         }
 
-        private void FIFOForm_FormClosed(object sender, FormClosedEventArgs e)
+        private void SchedulerWeakForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             startForm.Show();
         }

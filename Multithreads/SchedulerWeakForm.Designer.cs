@@ -1,7 +1,7 @@
 ﻿
 namespace Multithreads
 {
-    partial class Task3Form
+    partial class SchedulerWeakForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,19 @@ namespace Multithreads
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // SchedulerWeakForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Task3Form";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "SchedulerWeakForm";
+            this.Text = "SchedulerWeak";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SchedulerWeakForm_FormClosed);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

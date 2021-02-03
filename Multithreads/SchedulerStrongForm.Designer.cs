@@ -1,7 +1,7 @@
 ﻿
 namespace Multithreads
 {
-    partial class Task2Form
+    partial class SchedulerStrongForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,10 +29,19 @@ namespace Multithreads
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // SchedulerStrongForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Task1Form";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "SchedulerStrongForm";
+            this.Text = "SchedulerStrong";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SchedulerStrongForm_FormClosed);
+            this.ResumeLayout(false);
+
         }
 
         #endregion

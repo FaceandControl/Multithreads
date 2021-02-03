@@ -31,13 +31,15 @@ namespace Multithreads
         {
             this.SuspendLayout();
             // 
-            // Form1
+            // FIFOForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(929, 541);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "FIFOForm";
+            this.Text = "FIFO";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FIFOForm_FormClosed);
             this.ResumeLayout(false);
 
         }

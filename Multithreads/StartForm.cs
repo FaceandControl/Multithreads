@@ -16,5 +16,26 @@ namespace Multithreads
         {
             InitializeComponent();
         }
+
+        private void ShowFormAndHide(Form form)
+        {
+            form.Show();
+            Hide();
+        }
+
+        private void FIFOButton_Click(object sender, EventArgs e)
+        {
+            ShowFormAndHide(new FIFOForm(this));
+        }
+
+        private void SchedulerWeakButtom_Click(object sender, EventArgs e)
+        {
+            ShowFormAndHide(new SchedulerWeakForm(this));
+        }
+
+        private void SchedulerStrongButton_Click(object sender, EventArgs e)
+        {
+            ShowFormAndHide(new SchedulerStrongForm(this));
+        }
     }
 }
