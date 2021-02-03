@@ -1,10 +1,10 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace lab1
+namespace Multithreads
 {
     static class Program
     {
@@ -16,11 +16,7 @@ namespace lab1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< HEAD
             Application.Run(new FIFOForm());
-=======
-            Application.Run(new MainForm());
->>>>>>> origin/master
         }
     }
 }
