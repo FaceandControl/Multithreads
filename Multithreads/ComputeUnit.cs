@@ -17,13 +17,16 @@ namespace Multithreads
         private const int lower_performance = 1;
         private const int maximum_performance = 5;
 
-        private int performance = new Random().Next(lower_performance, maximum_performance + 1);
+        static private Random random = new Random();
+        private int performance = random.Next(lower_performance, maximum_performance + 1);
 
         public int Performance {
             get => performance;
             set {
                 if (value >= lower_performance && value <= maximum_performance)
                     performance = value;
+                else
+                    throw new NotSupportedException();
             }
         }
 

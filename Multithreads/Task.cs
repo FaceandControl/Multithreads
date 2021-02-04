@@ -51,14 +51,19 @@ namespace Multithreads {
 		private const int lower_complexity = 10;
 		private const int maximum_complexity = 200;
 
-		private int complexity = new Random().Next(lower_complexity, maximum_complexity + 1);
-		public int Complexity 
+		static Random random = new Random();
+		private int complexity = random.Next(lower_complexity, maximum_complexity + 1);
+		public int Complexity
 		{
 			get => complexity;
-			set {
-				if (lower_complexity >= value && maximum_complexity <= value) {
+			set
+			{
+				if (lower_complexity >= value && maximum_complexity <= value)
+				{
 					complexity = value;
 				}
+				else
+					throw new NotSupportedException();
 			}
 		}
 
@@ -81,8 +86,13 @@ namespace Multithreads {
 			return dict_all_options_units[new Random().Next(1, dict_all_options_units.Count + 1)];
 		}
 
-		public bool is_unit_fits(int unit_number) {
+		public bool IsUnitFits(int unit_number) {
 			return available_units.Contains(unit_number);
+		}
+
+		public List<int> GetUnitsFit()
+		{
+			return available_units;
 		}
 	}
 }

@@ -12,7 +12,13 @@ namespace Multithreads
             {
                 if (value >= 0 && value <= 100)
                     rand_coef = value;
+                else
+                    throw new NotSupportedException();
             }
+        }
+
+        public ProbabilityGenerator()
+        {
         }
 
         public ProbabilityGenerator(int _rand_coef) {
