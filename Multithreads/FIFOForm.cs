@@ -19,6 +19,8 @@ namespace Multithreads
         private bool wasTaskTaken = true;
         private int timeCounter;
         Task taskToDo;
+        private int allPerformance;
+        private int maxOperationsCouldBeDone;
         private List<int> shuffeledAbleUnits;
 
         public FIFOForm(StartForm _startForm)
@@ -34,11 +36,6 @@ namespace Multithreads
         private void FIFOForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             startForm.Show();
-        }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -61,12 +58,12 @@ namespace Multithreads
 
         private void button1_Click(object sender, EventArgs e)
         {
-            unitListView1.Clear();
-            unitListView2.Clear();
-            unitListView3.Clear();
-            unitListView4.Clear();
-            unitListView5.Clear();
-            tasksListView.Clear();
+            unitListView1.Items.Clear();
+            unitListView2.Items.Clear();
+            unitListView3.Items.Clear();
+            unitListView4.Items.Clear();
+            unitListView5.Items.Clear();
+            TasksListView.Items.Clear();
 
             EfficiencyLabel.Text = "Efficiency:";
             OperationsDoneLabel.Text = "Operations done:";
@@ -125,51 +122,72 @@ namespace Multithreads
                 Unit5Box.Text = Convert.ToString(computeUnits[4].Performance);
             }
 
+            maxOperationsCouldBeDone = 0;
+            allPerformance = 0;
+            foreach (ComputeUnit computeUnit in computeUnits)
+                allPerformance += computeUnit.Performance;
+
             TickTimer.Start();
             OneSecondTimer.Start();
-            //TenSocondsTimer.Start();
-        }
-
-        private void TenSocondsTimer_Tick(object sender, EventArgs e)
-        {
-            
         }
 
         private void StopButton_Click(object sender, EventArgs e)
         {
-
-
             TickTimer.Stop();
             OneSecondTimer.Stop();
-            //TenSocondsTimer. Stop();
+            EfficiencyLabel.Text = "Efficiency: " + (ComputeUnit.Sum_finished_operations / (double)maxOperationsCouldBeDone).ToString("0.##%");
+            OperationsDoneLabel.Text = "Operations done: " + ComputeUnit.Sum_finished_operations.ToString();
+            TasksDoneLabel.Text = "Tasks done: " + ComputeUnit.Sum_finished_tasks.ToString();
+            ComputeUnit.CleanStaticSum();
         }
 
         private void TickTimer_Tick(object sender, EventArgs e)
         {
+            maxOperationsCouldBeDone += allPerformance;
             for (int i = 0; i < computeUnits.Count; i++) {
                 computeUnits[i].Tick();
             }
 
-            if (0 < tasksListView.Items.Count)
-                tasksListView.EnsureVisible(tasksListView.Items.Count - 1);
-
-            string[] strs = { "fda", "dad", "dasds" };
-            ListViewItem item = new ListViewItem(strs);
-            tasksListView.Items.Add(item);
-
-            if (wasTaskTaken)
+            if (wasTaskTaken && probabilityGenerator.Generate())
             {
                 taskToDo = new Task();
                 shuffeledAbleUnits = new List<int>(taskToDo.GetUnitsFit());
-                
-                
+                ListViewItem taskListViewItem = new ListViewItem(new string[] {
+                    taskToDo.Task_id.ToString(),
+                    taskToDo.Complexity.ToString(),
+                    String.Join(", ", taskToDo.GetUnitsFit())
+                });
+                TasksListView.Items.Add(taskListViewItem);
                 shuffeledAbleUnits.Shuffle();
-            }
-            if (!wasTaskTaken || probabilityGenerator.Generate()) {
                 wasTaskTaken = false;
+            }
+            if (!wasTaskTaken) {
                 for (int i = 0; i < shuffeledAbleUnits.Count; i++) {
                     if (computeUnits[shuffeledAbleUnits[i] - 1].AddTaskFIFO(taskToDo.Complexity))
                     {
+                        ListViewItem unitListViewItem = new ListViewItem(new string[] {
+                            taskToDo.Task_id.ToString(),
+                            taskToDo.Complexity.ToString(),
+                            String.Join(", ", taskToDo.GetUnitsFit())
+                        });
+                        switch (shuffeledAbleUnits[i])
+                        {
+                            case 1:
+                                unitListView1.Items.Add(unitListViewItem);
+                                break;
+                            case 2:
+                                unitListView2.Items.Add(unitListViewItem);
+                                break;
+                            case 3:
+                                unitListView3.Items.Add(unitListViewItem);
+                                break;
+                            case 4:
+                                unitListView4.Items.Add(unitListViewItem);
+                                break;
+                            case 5:
+                                unitListView5.Items.Add(unitListViewItem);
+                                break;
+                        }
                         wasTaskTaken = true;
                         return;
                     }

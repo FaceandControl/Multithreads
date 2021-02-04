@@ -30,30 +30,11 @@ namespace Multithreads
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.unitListView5 = new System.Windows.Forms.ListView();
-            this.IDUnit1ViewList = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.ComplexityUnit1ViewList = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.unitListView4 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.unitListView3 = new System.Windows.Forms.ListView();
-            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.unitListView2 = new System.Windows.Forms.ListView();
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.unitListView1 = new System.Windows.Forms.ListView();
-            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Unit1Label = new System.Windows.Forms.Label();
             this.Unit2Label = new System.Windows.Forms.Label();
             this.Unit3Label = new System.Windows.Forms.Label();
             this.Unit4Label = new System.Windows.Forms.Label();
             this.Unit5Label = new System.Windows.Forms.Label();
-            this.tasksListView = new System.Windows.Forms.ListView();
-            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.columnHeader11 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Unit1Box = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -70,131 +51,30 @@ namespace Multithreads
             this.StopButton = new System.Windows.Forms.Button();
             this.TickTimer = new System.Windows.Forms.Timer(this.components);
             this.OneSecondTimer = new System.Windows.Forms.Timer(this.components);
-            this.TenSocondsTimer = new System.Windows.Forms.Timer(this.components);
             this.SecondsLeftlabel = new System.Windows.Forms.Label();
             this.TasksDoneLabel = new System.Windows.Forms.Label();
             this.OperationsDoneLabel = new System.Windows.Forms.Label();
             this.EfficiencyLabel = new System.Windows.Forms.Label();
+            this.TasksListView = new System.Windows.Forms.ListView();
+            this.columnHeader14 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader16 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader17 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.unitListView1 = new System.Windows.Forms.ListView();
+            this.columnHeader9 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader10 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.unitListView2 = new System.Windows.Forms.ListView();
+            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.unitListView3 = new System.Windows.Forms.ListView();
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.unitListView4 = new System.Windows.Forms.ListView();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.unitListView5 = new System.Windows.Forms.ListView();
+            this.columnHeader7 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader8 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
-            // 
-            // unitListView5
-            // 
-            this.unitListView5.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.IDUnit1ViewList,
-            this.ComplexityUnit1ViewList});
-            this.unitListView5.HideSelection = false;
-            this.unitListView5.Location = new System.Drawing.Point(862, 73);
-            this.unitListView5.Name = "unitListView5";
-            this.unitListView5.Size = new System.Drawing.Size(170, 311);
-            this.unitListView5.TabIndex = 0;
-            this.unitListView5.UseCompatibleStateImageBehavior = false;
-            this.unitListView5.View = System.Windows.Forms.View.Details;
-            this.unitListView5.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
-            // 
-            // IDUnit1ViewList
-            // 
-            this.IDUnit1ViewList.Text = "ID";
-            this.IDUnit1ViewList.Width = 74;
-            // 
-            // ComplexityUnit1ViewList
-            // 
-            this.ComplexityUnit1ViewList.Text = "Complexity";
-            this.ComplexityUnit1ViewList.Width = 96;
-            // 
-            // unitListView4
-            // 
-            this.unitListView4.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1,
-            this.columnHeader2});
-            this.unitListView4.HideSelection = false;
-            this.unitListView4.Location = new System.Drawing.Point(657, 73);
-            this.unitListView4.Name = "unitListView4";
-            this.unitListView4.Size = new System.Drawing.Size(170, 311);
-            this.unitListView4.TabIndex = 1;
-            this.unitListView4.UseCompatibleStateImageBehavior = false;
-            this.unitListView4.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Text = "ID";
-            this.columnHeader1.Width = 74;
-            // 
-            // columnHeader2
-            // 
-            this.columnHeader2.Text = "Complexity";
-            this.columnHeader2.Width = 96;
-            // 
-            // unitListView3
-            // 
-            this.unitListView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader3,
-            this.columnHeader4});
-            this.unitListView3.HideSelection = false;
-            this.unitListView3.Location = new System.Drawing.Point(457, 73);
-            this.unitListView3.Name = "unitListView3";
-            this.unitListView3.Size = new System.Drawing.Size(170, 311);
-            this.unitListView3.TabIndex = 2;
-            this.unitListView3.UseCompatibleStateImageBehavior = false;
-            this.unitListView3.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader3
-            // 
-            this.columnHeader3.Text = "ID";
-            this.columnHeader3.Width = 74;
-            // 
-            // columnHeader4
-            // 
-            this.columnHeader4.Text = "Complexity";
-            this.columnHeader4.Width = 96;
-            // 
-            // unitListView2
-            // 
-            this.unitListView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader5,
-            this.columnHeader6});
-            this.unitListView2.HideSelection = false;
-            this.unitListView2.Location = new System.Drawing.Point(253, 73);
-            this.unitListView2.Name = "unitListView2";
-            this.unitListView2.Size = new System.Drawing.Size(170, 311);
-            this.unitListView2.TabIndex = 3;
-            this.unitListView2.UseCompatibleStateImageBehavior = false;
-            this.unitListView2.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "ID";
-            this.columnHeader5.Width = 74;
-            // 
-            // columnHeader6
-            // 
-            this.columnHeader6.Text = "Complexity";
-            this.columnHeader6.Width = 96;
-            // 
-            // unitListView1
-            // 
-            this.unitListView1.Activation = System.Windows.Forms.ItemActivation.OneClick;
-            this.unitListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader7,
-            this.columnHeader8});
-            this.unitListView1.GridLines = true;
-            this.unitListView1.HideSelection = false;
-            this.unitListView1.HoverSelection = true;
-            this.unitListView1.Location = new System.Drawing.Point(50, 73);
-            this.unitListView1.Name = "unitListView1";
-            this.unitListView1.Size = new System.Drawing.Size(170, 311);
-            this.unitListView1.TabIndex = 4;
-            this.unitListView1.UseCompatibleStateImageBehavior = false;
-            this.unitListView1.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader7
-            // 
-            this.columnHeader7.Text = "ID";
-            this.columnHeader7.Width = 74;
-            // 
-            // columnHeader8
-            // 
-            this.columnHeader8.Text = "Complexity";
-            this.columnHeader8.Width = 96;
             // 
             // Unit1Label
             // 
@@ -202,7 +82,7 @@ namespace Multithreads
             this.Unit1Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.74545F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Unit1Label.Location = new System.Drawing.Point(98, 31);
             this.Unit1Label.Name = "Unit1Label";
-            this.Unit1Label.Size = new System.Drawing.Size(68, 26);
+            this.Unit1Label.Size = new System.Drawing.Size(67, 25);
             this.Unit1Label.TabIndex = 5;
             this.Unit1Label.Text = "Unit1";
             this.Unit1Label.Click += new System.EventHandler(this.label1_Click);
@@ -213,7 +93,7 @@ namespace Multithreads
             this.Unit2Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.74545F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Unit2Label.Location = new System.Drawing.Point(300, 31);
             this.Unit2Label.Name = "Unit2Label";
-            this.Unit2Label.Size = new System.Drawing.Size(68, 26);
+            this.Unit2Label.Size = new System.Drawing.Size(67, 25);
             this.Unit2Label.TabIndex = 6;
             this.Unit2Label.Text = "Unit2";
             // 
@@ -223,7 +103,7 @@ namespace Multithreads
             this.Unit3Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.74545F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Unit3Label.Location = new System.Drawing.Point(495, 31);
             this.Unit3Label.Name = "Unit3Label";
-            this.Unit3Label.Size = new System.Drawing.Size(68, 26);
+            this.Unit3Label.Size = new System.Drawing.Size(67, 25);
             this.Unit3Label.TabIndex = 7;
             this.Unit3Label.Text = "Unit3";
             // 
@@ -233,7 +113,7 @@ namespace Multithreads
             this.Unit4Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.74545F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Unit4Label.Location = new System.Drawing.Point(706, 31);
             this.Unit4Label.Name = "Unit4Label";
-            this.Unit4Label.Size = new System.Drawing.Size(68, 26);
+            this.Unit4Label.Size = new System.Drawing.Size(67, 25);
             this.Unit4Label.TabIndex = 8;
             this.Unit4Label.Text = "Unit4";
             // 
@@ -243,43 +123,9 @@ namespace Multithreads
             this.Unit5Label.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.74545F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Unit5Label.Location = new System.Drawing.Point(917, 31);
             this.Unit5Label.Name = "Unit5Label";
-            this.Unit5Label.Size = new System.Drawing.Size(68, 26);
+            this.Unit5Label.Size = new System.Drawing.Size(67, 25);
             this.Unit5Label.TabIndex = 9;
             this.Unit5Label.Text = "Unit5";
-            // 
-            // tasksListView
-            // 
-            this.tasksListView.Activation = System.Windows.Forms.ItemActivation.OneClick;
-            this.tasksListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader9,
-            this.columnHeader10,
-            this.columnHeader11});
-            this.tasksListView.Font = new System.Drawing.Font("Perpetua", 7.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tasksListView.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.tasksListView.GridLines = true;
-            this.tasksListView.HideSelection = false;
-            this.tasksListView.HoverSelection = true;
-            this.tasksListView.Location = new System.Drawing.Point(80, 441);
-            this.tasksListView.Name = "tasksListView";
-            this.tasksListView.Size = new System.Drawing.Size(288, 311);
-            this.tasksListView.TabIndex = 10;
-            this.tasksListView.UseCompatibleStateImageBehavior = false;
-            this.tasksListView.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader9
-            // 
-            this.columnHeader9.Text = "ID";
-            this.columnHeader9.Width = 74;
-            // 
-            // columnHeader10
-            // 
-            this.columnHeader10.Text = "Complexity";
-            this.columnHeader10.Width = 96;
-            // 
-            // columnHeader11
-            // 
-            this.columnHeader11.Text = "Units able to handle";
-            this.columnHeader11.Width = 115;
             // 
             // Unit1Box
             // 
@@ -435,7 +281,7 @@ namespace Multithreads
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button1.Location = new System.Drawing.Point(457, 669);
+            this.button1.Location = new System.Drawing.Point(530, 669);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(142, 83);
             this.button1.TabIndex = 28;
@@ -446,7 +292,7 @@ namespace Multithreads
             // StopButton
             // 
             this.StopButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.StopButton.Location = new System.Drawing.Point(763, 669);
+            this.StopButton.Location = new System.Drawing.Point(739, 669);
             this.StopButton.Name = "StopButton";
             this.StopButton.Size = new System.Drawing.Size(142, 83);
             this.StopButton.TabIndex = 29;
@@ -463,11 +309,6 @@ namespace Multithreads
             // 
             this.OneSecondTimer.Interval = 1000;
             this.OneSecondTimer.Tick += new System.EventHandler(this.timer2_Tick);
-            // 
-            // TenSocondsTimer
-            // 
-            this.TenSocondsTimer.Interval = 10000;
-            this.TenSocondsTimer.Tick += new System.EventHandler(this.TenSocondsTimer_Tick);
             // 
             // SecondsLeftlabel
             // 
@@ -509,12 +350,222 @@ namespace Multithreads
             this.EfficiencyLabel.TabIndex = 33;
             this.EfficiencyLabel.Text = "Efficiency:";
             // 
+            // TasksListView
+            // 
+            this.TasksListView.Activation = System.Windows.Forms.ItemActivation.OneClick;
+            this.TasksListView.BackColor = System.Drawing.SystemColors.Window;
+            this.TasksListView.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.TasksListView.CheckBoxes = true;
+            this.TasksListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader14,
+            this.columnHeader16,
+            this.columnHeader17});
+            this.TasksListView.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.TasksListView.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TasksListView.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.TasksListView.GridLines = true;
+            this.TasksListView.HideSelection = false;
+            this.TasksListView.HoverSelection = true;
+            this.TasksListView.Location = new System.Drawing.Point(50, 441);
+            this.TasksListView.Name = "TasksListView";
+            this.TasksListView.Size = new System.Drawing.Size(353, 311);
+            this.TasksListView.TabIndex = 42;
+            this.TasksListView.UseCompatibleStateImageBehavior = false;
+            this.TasksListView.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader14
+            // 
+            this.columnHeader14.Text = "ID";
+            this.columnHeader14.Width = 80;
+            // 
+            // columnHeader16
+            // 
+            this.columnHeader16.Text = "Complexity";
+            this.columnHeader16.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader16.Width = 95;
+            // 
+            // columnHeader17
+            // 
+            this.columnHeader17.Text = "Units able to handle";
+            this.columnHeader17.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader17.Width = 152;
+            // 
+            // unitListView1
+            // 
+            this.unitListView1.Activation = System.Windows.Forms.ItemActivation.OneClick;
+            this.unitListView1.BackColor = System.Drawing.SystemColors.Window;
+            this.unitListView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.unitListView1.CheckBoxes = true;
+            this.unitListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader9,
+            this.columnHeader10});
+            this.unitListView1.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.unitListView1.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.unitListView1.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.unitListView1.GridLines = true;
+            this.unitListView1.HideSelection = false;
+            this.unitListView1.HoverSelection = true;
+            this.unitListView1.Location = new System.Drawing.Point(50, 73);
+            this.unitListView1.Name = "unitListView1";
+            this.unitListView1.Size = new System.Drawing.Size(187, 311);
+            this.unitListView1.TabIndex = 43;
+            this.unitListView1.UseCompatibleStateImageBehavior = false;
+            this.unitListView1.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader9
+            // 
+            this.columnHeader9.Text = "ID";
+            this.columnHeader9.Width = 80;
+            // 
+            // columnHeader10
+            // 
+            this.columnHeader10.Text = "Complexity";
+            this.columnHeader10.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader10.Width = 95;
+            // 
+            // unitListView2
+            // 
+            this.unitListView2.Activation = System.Windows.Forms.ItemActivation.OneClick;
+            this.unitListView2.BackColor = System.Drawing.SystemColors.Window;
+            this.unitListView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.unitListView2.CheckBoxes = true;
+            this.unitListView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader1,
+            this.columnHeader2});
+            this.unitListView2.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.unitListView2.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.unitListView2.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.unitListView2.GridLines = true;
+            this.unitListView2.HideSelection = false;
+            this.unitListView2.HoverSelection = true;
+            this.unitListView2.Location = new System.Drawing.Point(253, 73);
+            this.unitListView2.Name = "unitListView2";
+            this.unitListView2.Size = new System.Drawing.Size(187, 311);
+            this.unitListView2.TabIndex = 44;
+            this.unitListView2.UseCompatibleStateImageBehavior = false;
+            this.unitListView2.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader1
+            // 
+            this.columnHeader1.Text = "ID";
+            this.columnHeader1.Width = 80;
+            // 
+            // columnHeader2
+            // 
+            this.columnHeader2.Text = "Complexity";
+            this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader2.Width = 95;
+            // 
+            // unitListView3
+            // 
+            this.unitListView3.Activation = System.Windows.Forms.ItemActivation.OneClick;
+            this.unitListView3.BackColor = System.Drawing.SystemColors.Window;
+            this.unitListView3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.unitListView3.CheckBoxes = true;
+            this.unitListView3.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader3,
+            this.columnHeader4});
+            this.unitListView3.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.unitListView3.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.unitListView3.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.unitListView3.GridLines = true;
+            this.unitListView3.HideSelection = false;
+            this.unitListView3.HoverSelection = true;
+            this.unitListView3.Location = new System.Drawing.Point(457, 73);
+            this.unitListView3.Name = "unitListView3";
+            this.unitListView3.Size = new System.Drawing.Size(187, 311);
+            this.unitListView3.TabIndex = 45;
+            this.unitListView3.UseCompatibleStateImageBehavior = false;
+            this.unitListView3.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "ID";
+            this.columnHeader3.Width = 80;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Complexity";
+            this.columnHeader4.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader4.Width = 95;
+            // 
+            // unitListView4
+            // 
+            this.unitListView4.Activation = System.Windows.Forms.ItemActivation.OneClick;
+            this.unitListView4.BackColor = System.Drawing.SystemColors.Window;
+            this.unitListView4.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.unitListView4.CheckBoxes = true;
+            this.unitListView4.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader5,
+            this.columnHeader6});
+            this.unitListView4.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.unitListView4.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.unitListView4.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.unitListView4.GridLines = true;
+            this.unitListView4.HideSelection = false;
+            this.unitListView4.HoverSelection = true;
+            this.unitListView4.Location = new System.Drawing.Point(657, 73);
+            this.unitListView4.Name = "unitListView4";
+            this.unitListView4.Size = new System.Drawing.Size(187, 311);
+            this.unitListView4.TabIndex = 46;
+            this.unitListView4.UseCompatibleStateImageBehavior = false;
+            this.unitListView4.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "ID";
+            this.columnHeader5.Width = 80;
+            // 
+            // columnHeader6
+            // 
+            this.columnHeader6.Text = "Complexity";
+            this.columnHeader6.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader6.Width = 95;
+            // 
+            // unitListView5
+            // 
+            this.unitListView5.Activation = System.Windows.Forms.ItemActivation.OneClick;
+            this.unitListView5.BackColor = System.Drawing.SystemColors.Window;
+            this.unitListView5.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.unitListView5.CheckBoxes = true;
+            this.unitListView5.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader7,
+            this.columnHeader8});
+            this.unitListView5.Cursor = System.Windows.Forms.Cursors.Cross;
+            this.unitListView5.Font = new System.Drawing.Font("Consolas", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.unitListView5.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.unitListView5.GridLines = true;
+            this.unitListView5.HideSelection = false;
+            this.unitListView5.HoverSelection = true;
+            this.unitListView5.Location = new System.Drawing.Point(862, 73);
+            this.unitListView5.Name = "unitListView5";
+            this.unitListView5.Size = new System.Drawing.Size(187, 311);
+            this.unitListView5.TabIndex = 47;
+            this.unitListView5.UseCompatibleStateImageBehavior = false;
+            this.unitListView5.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader7
+            // 
+            this.columnHeader7.Text = "ID";
+            this.columnHeader7.Width = 80;
+            // 
+            // columnHeader8
+            // 
+            this.columnHeader8.Text = "Complexity";
+            this.columnHeader8.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.columnHeader8.Width = 95;
+            // 
             // FIFOForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1083, 814);
-            this.Controls.Add(this.tasksListView);
+            this.Controls.Add(this.unitListView5);
+            this.Controls.Add(this.unitListView4);
+            this.Controls.Add(this.unitListView3);
+            this.Controls.Add(this.unitListView2);
+            this.Controls.Add(this.unitListView1);
+            this.Controls.Add(this.TasksListView);
             this.Controls.Add(this.EfficiencyLabel);
             this.Controls.Add(this.OperationsDoneLabel);
             this.Controls.Add(this.TasksDoneLabel);
@@ -538,12 +589,7 @@ namespace Multithreads
             this.Controls.Add(this.Unit3Label);
             this.Controls.Add(this.Unit2Label);
             this.Controls.Add(this.Unit1Label);
-            this.Controls.Add(this.unitListView1);
-            this.Controls.Add(this.unitListView2);
-            this.Controls.Add(this.unitListView3);
-            this.Controls.Add(this.unitListView4);
-            this.Controls.Add(this.unitListView5);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "FIFOForm";
             this.Text = "FIFO";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FIFOForm_FormClosed);
@@ -553,31 +599,11 @@ namespace Multithreads
         }
 
         #endregion
-
-        private System.Windows.Forms.ListView unitListView5;
-        private System.Windows.Forms.ColumnHeader IDUnit1ViewList;
-        private System.Windows.Forms.ColumnHeader ComplexityUnit1ViewList;
-        private System.Windows.Forms.ListView unitListView4;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
-        private System.Windows.Forms.ColumnHeader columnHeader2;
-        private System.Windows.Forms.ListView unitListView3;
-        private System.Windows.Forms.ColumnHeader columnHeader3;
-        private System.Windows.Forms.ColumnHeader columnHeader4;
-        private System.Windows.Forms.ListView unitListView2;
-        private System.Windows.Forms.ColumnHeader columnHeader5;
-        private System.Windows.Forms.ColumnHeader columnHeader6;
-        private System.Windows.Forms.ListView unitListView1;
-        private System.Windows.Forms.ColumnHeader columnHeader7;
-        private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.Label Unit1Label;
         private System.Windows.Forms.Label Unit2Label;
         private System.Windows.Forms.Label Unit3Label;
         private System.Windows.Forms.Label Unit4Label;
         private System.Windows.Forms.Label Unit5Label;
-        private System.Windows.Forms.ListView tasksListView;
-        private System.Windows.Forms.ColumnHeader columnHeader9;
-        private System.Windows.Forms.ColumnHeader columnHeader10;
-        private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.ComboBox Unit1Box;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -594,11 +620,29 @@ namespace Multithreads
         private System.Windows.Forms.Button StopButton;
         private System.Windows.Forms.Timer TickTimer;
         private System.Windows.Forms.Timer OneSecondTimer;
-        private System.Windows.Forms.Timer TenSocondsTimer;
         private System.Windows.Forms.Label SecondsLeftlabel;
         private System.Windows.Forms.Label TasksDoneLabel;
         private System.Windows.Forms.Label OperationsDoneLabel;
         private System.Windows.Forms.Label EfficiencyLabel;
+        private System.Windows.Forms.ListView TasksListView;
+        private System.Windows.Forms.ColumnHeader columnHeader14;
+        private System.Windows.Forms.ColumnHeader columnHeader16;
+        private System.Windows.Forms.ColumnHeader columnHeader17;
+        private System.Windows.Forms.ListView unitListView1;
+        private System.Windows.Forms.ColumnHeader columnHeader9;
+        private System.Windows.Forms.ColumnHeader columnHeader10;
+        private System.Windows.Forms.ListView unitListView2;
+        private System.Windows.Forms.ColumnHeader columnHeader1;
+        private System.Windows.Forms.ColumnHeader columnHeader2;
+        private System.Windows.Forms.ListView unitListView3;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.ListView unitListView4;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ColumnHeader columnHeader6;
+        private System.Windows.Forms.ListView unitListView5;
+        private System.Windows.Forms.ColumnHeader columnHeader7;
+        private System.Windows.Forms.ColumnHeader columnHeader8;
     }
 }
 
