@@ -8,11 +8,10 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>Multithreads</RootNamespace>
     <AssemblyName>Multithreads</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -47,27 +46,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FormTask3.cs">
+    <Compile Include="ComputeUnit.cs" />
+    <Compile Include="List.cs" />
+    <Compile Include="ProbabilityGenerator.cs" />
+    <Compile Include="StartForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormTask3.Designer.cs">
-      <DependentUpon>FormTask3.cs</DependentUpon>
+    <Compile Include="StartForm.Designer.cs">
+      <DependentUpon>StartForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="Task.cs" />
+    <Compile Include="FIFOForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.Designer.cs">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <Compile Include="FIFOForm.Designer.cs">
+      <DependentUpon>FIFOForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Queue.cs" />
-    <Compile Include="Task3.cs" />
-    <EmbeddedResource Include="FormTask3.resx">
-      <DependentUpon>FormTask3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
-      <DependentUpon>MainForm.cs</DependentUpon>
+    <Compile Include="SchedulerWeakForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SchedulerWeakForm.Designer.cs">
+      <DependentUpon>SchedulerWeakForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SchedulerStrongForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SchedulerStrongForm.Designer.cs">
+      <DependentUpon>SchedulerStrongForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FIFOForm.resx">
+      <DependentUpon>FIFOForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -77,8 +87,16 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SchedulerStrongForm.resx">
+      <DependentUpon>SchedulerStrongForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SchedulerWeakForm.resx">
+      <DependentUpon>SchedulerWeakForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartForm.resx">
+      <DependentUpon>StartForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
