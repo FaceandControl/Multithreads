@@ -56,6 +56,21 @@ namespace Multithreads
             return false;
         }
 
+        public void AddTaskSchedWeak(int complexity)
+        {
+            tasks_list.Add(complexity);
+        }
+
+        public int GetWorkload()
+        {
+            return tasks_list.Sum();
+        }
+
+        public int GetPerformance()
+        {
+            return performance;
+        }
+
         public void CleanUnitSum() 
         {
             Sum_unit_finished_tasks = 0;

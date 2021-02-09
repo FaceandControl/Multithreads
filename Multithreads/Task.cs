@@ -48,6 +48,7 @@ namespace Multithreads {
 		static private int task_id_counter = 0;
 		public int Task_id { get; }
 
+		private const int schedule_complexity = 4;
 		private const int lower_complexity = 10;
 		private const int maximum_complexity = 200;
 
@@ -58,7 +59,7 @@ namespace Multithreads {
 			get => complexity;
 			set
 			{
-				if (lower_complexity >= value && maximum_complexity <= value)
+				if (lower_complexity >= value && maximum_complexity <= value || value == schedule_complexity)
 				{
 					complexity = value;
 				}
@@ -80,6 +81,13 @@ namespace Multithreads {
 			available_units = GenerateAvailableUnits();
 			Complexity = _complexity;
 			Task_id = task_id_counter++;
+		}
+
+		public Task(int _task_id, List<int> _avaliavle_units)
+		{
+			available_units = _avaliavle_units;
+			Complexity = schedule_complexity;
+			Task_id = _task_id;
 		}
 
 		private List<int> GenerateAvailableUnits() {
