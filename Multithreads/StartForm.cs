@@ -35,7 +35,7 @@ namespace Multithreads
 
         private void SchedulerStrongButton_Click(object sender, EventArgs e)
         {
-            ShowFormAndHide(new SchedulerStrongForm(this));
+            ShowFormAndHide(new SchedulerStrongForm(this, 3));
         }
     }
 }
