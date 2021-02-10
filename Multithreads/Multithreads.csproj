@@ -47,8 +47,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ComputeUnit.cs" />
+    <Compile Include="GeneratePossibility.cs" />
     <Compile Include="List.cs" />
     <Compile Include="ProbabilityGenerator.cs" />
+    <Compile Include="Queue.cs" />
     <Compile Include="SchedulerWeakForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +78,7 @@
     <Compile Include="SchedulerStrongForm.Designer.cs">
       <DependentUpon>SchedulerStrongForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Task3.cs" />
     <EmbeddedResource Include="FIFOForm.resx">
       <DependentUpon>FIFOForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,6 +114,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="System\Threading\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
