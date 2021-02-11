@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Multithreads2
 {
@@ -21,7 +22,7 @@ namespace Multithreads2
     }
     class Thread
     {
-        private readonly List<IAction> actions;
+        private List<IAction> actions;
         public ActionStatus ReadStatus { get; set; } = ActionStatus.Active;
         public ActionStatus ComputeStatus { get; set; } = ActionStatus.NoActive;
         public ActionStatus WriteStatus { get; set; } = ActionStatus.NoActive;
@@ -84,6 +85,19 @@ namespace Multithreads2
                 }
             }
             return MemoryStatus.InProgress;
+        }
+
+        public List<ListViewItem> Show() 
+        {
+            List<ListViewItem> show = new List<ListViewItem>();
+            foreach (IAction action in actions) 
+            {
+                show.Add(new ListViewItem(new string[] {
+                            action.GetName(),
+                            action.GetTimeConsume().ToString() } 
+                ));
+            }
+            return show;
         }
 
         public void AddAction(bool isNextAction) 

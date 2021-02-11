@@ -8,11 +8,11 @@ namespace Multithreads2
 {
     struct TimeConsumeSettings
     {
-        public readonly int timeReadUnit;
-        public readonly int timeWriteUnit;
-        public readonly int timeComputeUnit;
+        public int timeReadUnit;
+        public int timeWriteUnit;
+        public int timeComputeUnit;
 
-        public TimeConsumeSettings(int _timeReadUnit, int _timeWriteUnit, int _timeComputeUnit) 
+        public TimeConsumeSettings(int _timeReadUnit, int _timeComputeUnit, int _timeWriteUnit) 
         {
             timeReadUnit = _timeReadUnit;
             timeWriteUnit = _timeWriteUnit;

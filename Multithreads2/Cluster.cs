@@ -19,7 +19,13 @@ namespace Multithreads2
             memory = new Memory();
             taskAmount = _taskAmount;
         }
-
+        public int AllTimeConsumed() 
+        {
+            int thread1TimeConsumed = thread1.AllTimeConsumed();
+            int thread2TimeConsumed = thread2.AllTimeConsumed();
+            if (thread1TimeConsumed >= thread2TimeConsumed) { return thread1TimeConsumed; }
+            return thread2TimeConsumed;
+        }
         public Cluster(Cluster cluster)
         {
             thread1 = new Thread(cluster.thread1);

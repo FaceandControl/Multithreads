@@ -19,9 +19,67 @@ namespace Multithreads2
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int taskAmount = 5;
-            TimeConsumeSettings timeConsumeSettings1 = new TimeConsumeSettings(3, 2, 2);
-            TimeConsumeSettings timeConsumeSettings2 = new TimeConsumeSettings(2, 2, 2);
+            listView1.Items.Clear();
+            listView2.Items.Clear();
+
+            int taskAmount = 10;
+            TimeConsumeSettings timeConsumeSettings1 = new TimeConsumeSettings(3, 5, 4);
+            TimeConsumeSettings timeConsumeSettings2 = new TimeConsumeSettings(6, 3, 2);
+
+            label10.Text = "";
+            label11.Text = "";
+            label12.Text = "";
+            
+            try
+            {
+                timeConsumeSettings1.timeReadUnit = Convert.ToInt32(comboBox6.Text);
+            }
+            catch
+            {
+                comboBox6.Text = timeConsumeSettings1.timeReadUnit.ToString();
+            }
+            try
+            {
+                timeConsumeSettings1.timeComputeUnit = Convert.ToInt32(comboBox1.Text);
+            }
+            catch
+            {
+                comboBox1.Text = timeConsumeSettings1.timeComputeUnit.ToString();
+            }
+            try
+            {
+                timeConsumeSettings1.timeWriteUnit = Convert.ToInt32(comboBox2.Text);
+            }
+            catch
+            {
+                comboBox2.Text = timeConsumeSettings1.timeWriteUnit.ToString();
+            }
+
+            try
+            {
+                timeConsumeSettings2.timeReadUnit = Convert.ToInt32(comboBox3.Text);
+            }
+            catch
+            {
+                comboBox3.Text = timeConsumeSettings2.timeReadUnit.ToString();
+            }
+            try
+            {
+                timeConsumeSettings2.timeComputeUnit = Convert.ToInt32(comboBox4.Text);
+            }
+            catch
+            {
+                comboBox4.Text = timeConsumeSettings2.timeComputeUnit.ToString();
+            }
+            try
+            {
+                timeConsumeSettings2.timeWriteUnit = Convert.ToInt32(comboBox5.Text);
+            }
+            catch
+            {
+                comboBox5.Text = timeConsumeSettings2.timeWriteUnit.ToString();
+            }
+
             bool isAllThreadsFinished = false;
 
             List<Cluster> clusters = new List<Cluster>() { new Cluster(taskAmount, timeConsumeSettings1, timeConsumeSettings2) };
@@ -129,8 +187,46 @@ namespace Multithreads2
                 }
             }
 
+            int minTimeConsumed = clusters[0].AllTimeConsumed();
+            int indexMin = 0;
+            for (int i = 1; i < clusters.Count; i++) 
+            {
+                int timeConsumed = clusters[i].AllTimeConsumed();
+                if (minTimeConsumed > timeConsumed) 
+                {
+                    minTimeConsumed = timeConsumed;
+                    indexMin = i;
+                }
+            }
+            List<ListViewItem> listViewItems1 = clusters[indexMin].thread1.Show();
+            List<ListViewItem> listViewItems2 = clusters[indexMin].thread2.Show();
 
-            Console.WriteLine(clusters.Count);
+            foreach (ListViewItem View in listViewItems1) 
+            {
+                listView1.Items.Add(View);
+            }
+
+            foreach (ListViewItem View in listViewItems2)
+            {
+                listView2.Items.Add(View);
+            }
+
+
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MemoryForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
