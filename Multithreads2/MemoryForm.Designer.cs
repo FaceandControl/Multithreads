@@ -49,11 +49,10 @@ namespace Multithreads2
             this.comboBox4 = new System.Windows.Forms.ComboBox();
             this.comboBox5 = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
+            this.EfficiencyLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // startButton
@@ -299,28 +298,18 @@ namespace Multithreads2
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(39, 489);
+            this.label7.Location = new System.Drawing.Point(39, 507);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(222, 24);
             this.label7.TabIndex = 65;
             this.label7.Text = "Ideally in Parralel System:";
             this.label7.Click += new System.EventHandler(this.label7_Click);
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(39, 543);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(257, 24);
-            this.label8.TabIndex = 66;
-            this.label8.Text = "Ideally in Not-Parralel System:";
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label9.Location = new System.Drawing.Point(39, 592);
+            this.label9.Location = new System.Drawing.Point(39, 565);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(102, 24);
             this.label9.TabIndex = 67;
@@ -330,7 +319,7 @@ namespace Multithreads2
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label10.Location = new System.Drawing.Point(339, 489);
+            this.label10.Location = new System.Drawing.Point(277, 507);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(0, 24);
             this.label10.TabIndex = 68;
@@ -339,30 +328,30 @@ namespace Multithreads2
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label11.Location = new System.Drawing.Point(339, 543);
+            this.label11.Location = new System.Drawing.Point(277, 561);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(0, 24);
             this.label11.TabIndex = 69;
             // 
-            // label12
+            // EfficiencyLabel
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label12.Location = new System.Drawing.Point(339, 592);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(0, 24);
-            this.label12.TabIndex = 70;
+            this.EfficiencyLabel.AutoSize = true;
+            this.EfficiencyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.EfficiencyLabel.Location = new System.Drawing.Point(405, 498);
+            this.EfficiencyLabel.Name = "EfficiencyLabel";
+            this.EfficiencyLabel.Size = new System.Drawing.Size(106, 24);
+            this.EfficiencyLabel.TabIndex = 70;
+            this.EfficiencyLabel.Text = "Efficiency:";
             // 
             // MemoryForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(716, 625);
-            this.Controls.Add(this.label12);
+            this.Controls.Add(this.EfficiencyLabel);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.comboBox5);
             this.Controls.Add(this.comboBox4);
@@ -408,11 +397,10 @@ namespace Multithreads2
         private System.Windows.Forms.ComboBox comboBox4;
         private System.Windows.Forms.ComboBox comboBox5;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label EfficiencyLabel;
     }
 }
 

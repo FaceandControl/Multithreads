@@ -28,7 +28,6 @@ namespace Multithreads2
 
             label10.Text = "";
             label11.Text = "";
-            label12.Text = "";
             
             try
             {
@@ -210,10 +209,15 @@ namespace Multithreads2
             {
                 listView2.Items.Add(View);
             }
-
-
+            int idealTimeConsume = 
+            ((timeConsumeSettings1.timeReadUnit + timeConsumeSettings2.timeReadUnit +
+                timeConsumeSettings1.timeComputeUnit + timeConsumeSettings2.timeComputeUnit +
+                timeConsumeSettings1.timeWriteUnit + timeConsumeSettings2.timeWriteUnit) * taskAmount
+                / 4);
+            label10.Text = idealTimeConsume.ToString() + " Ticks";
+            label11.Text = minTimeConsumed.ToString() + " Ticks";
+            EfficiencyLabel.Text = "Efficiency: " + ((double)minTimeConsumed / idealTimeConsume - 1).ToString("0.##%") + " lower";
         }
-
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
