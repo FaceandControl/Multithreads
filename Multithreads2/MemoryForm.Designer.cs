@@ -337,7 +337,7 @@ namespace Multithreads2
             // 
             this.EfficiencyLabel.AutoSize = true;
             this.EfficiencyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.78182F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.EfficiencyLabel.Location = new System.Drawing.Point(405, 498);
+            this.EfficiencyLabel.Location = new System.Drawing.Point(443, 507);
             this.EfficiencyLabel.Name = "EfficiencyLabel";
             this.EfficiencyLabel.Size = new System.Drawing.Size(106, 24);
             this.EfficiencyLabel.TabIndex = 70;
