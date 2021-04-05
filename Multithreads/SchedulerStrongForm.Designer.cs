@@ -604,6 +604,7 @@ namespace Multithreads
             this.label13.Size = new System.Drawing.Size(211, 40);
             this.label13.TabIndex = 67;
             this.label13.Text = "Created by Dmytro Rozhko\nKV-81";
+            this.label13.Click += new System.EventHandler(this.label13_Click);
             // 
             // SchedulerStrongForm
             // 

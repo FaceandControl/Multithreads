@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30907.101
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1340
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multithreads", "Multithreads\Multithreads.csproj", "{0718C644-8AE5-4D62-AD46-5D8C37FD6135}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multithreads2", "Multithreads2\Multithreads2.csproj", "{5E086D6E-BFF9-4717-91AB-395220DE3006}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Multithreads3", "Multithreads3\Multithreads3.csproj", "{4F0D2A40-6658-4367-B898-8B3D05156FEF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{5E086D6E-BFF9-4717-91AB-395220DE3006}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5E086D6E-BFF9-4717-91AB-395220DE3006}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5E086D6E-BFF9-4717-91AB-395220DE3006}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4F0D2A40-6658-4367-B898-8B3D05156FEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4F0D2A40-6658-4367-B898-8B3D05156FEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4F0D2A40-6658-4367-B898-8B3D05156FEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4F0D2A40-6658-4367-B898-8B3D05156FEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
